@@ -22,7 +22,7 @@ def load_contacts_to_list():
     connection = sqlite3.connect("contacts.db")
     cursor = connection.cursor()
     cursor.execute("""
-        SELECT id, first_name, last_name, phone_number, email FROM contacts ORDER BY last_name, first_name
+        SELECT id, first_name, last_name, phone_number, email FROM contacts
     """)
     contacts = cursor.fetchall()
     connection.close()
